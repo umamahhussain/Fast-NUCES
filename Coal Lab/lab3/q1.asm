@@ -1,0 +1,17 @@
+[org 0x0100]
+
+mov ax,0x1254
+mov bx,0x0FFF
+
+;part a
+add ax,0xEDAB
+
+;part b
+add ax,bx
+
+;part c
+add bx,0xF001
+
+mov ax,0x4c00
+int 0x21
+
