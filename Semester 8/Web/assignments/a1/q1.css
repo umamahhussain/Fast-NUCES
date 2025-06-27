@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #eef7ff;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Fieldset & Legend */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    font-weight: 500;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs & Selects */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+    background: #f9f9f9;
+}
+
+/* Floating Labels */
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0px 0px 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* File Upload */
+input[type="file"] {
+    padding: 10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+/* File Upload Hover Effect */
+input[type="file"]:hover {
+    background-color: #eaeaea;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+    }
+
+    .progress-bar {
+        font-size: 10px;
+    }
+}
