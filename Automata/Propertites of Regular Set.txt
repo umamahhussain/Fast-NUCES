@@ -1,0 +1,224 @@
+
+L=String starting with 1, and ending with 0....alphabet 1,0
+R.E=1(0+1)*0
+
+	
+................
+
+L=starting and ending with a and in between any combination of b...alpha=a,b
+
+R.E=ab*a
+....................
+ab
+ba
+(ab*b + bb*a)
+
+ab,ba,abb,bba.......
+
+ab+ + b+ a
+
+a(b,bb,bbb....) + (b,bb,bbb...).a
+
+ab,abb,abbb...+ ba,bba,bbba....
+
+........................
+
+L=aplpha=0,having even length of 0
+
+L{E,00,0000.....}
+
+R.E= (00)*
+............................
+L=aplpha=0,having odd length of 0
+L={0,000,00000,0000000....}
+
+R.E= 0.(00)*
+0.(E,00,0000,000000........)
+L={0,000,00000,0000000....}
+
+................................
+
+L=alpha={0,1}-->such that all the string donot contain substring
+01
+
+L={E,0,1,10,110,100,1000,00,11.....}
+
+1*={E,1,11,111......}
+0*={E,0,00,000......}
+
+R.E=1*0*={E,1,0,11,00,10,100,1100.......}
+
+......................
+
+R.E=(0 + 10*)
+
+L={0,1,10,100,1000....}
+Rejected
+01,00,11....
+
+.........................
+(0*10*)
+
+L={1,01,10,010,0010.....}
+Rejected
+E,0,11,111,000....
+..............................
+
+Find the shortest string that is not in the language represented by the regular expression a*(ab)*b*
+
+Solution: 
+accepted={E,a,b,ab,aabb,aab....}
+rejected={ba}
+
+........................................
+Find a regular expression corresponding to the language of all strings over the alphabet { a, b } that do not end with ab.
+
+
+Solution: 
+L={E,a,b,aa,bb,ba,aaa,bbb,baa,aba.....}
+
+
+(E+b+(a+b)*(a+bb))
+
+....................................
+Describe as simply as possible in English the language corresponding to the regular expression ( b + ab )*( a + ab )*.
+
+"aabbb"
+
+L={E,b,a,ab,ba,bab,abab,aba,bb,aa...}
+
+doesnot contain aabb
+ ( b + ab )* represents strings which do not contain any substring aa and which end in b, and ( a + ab )* represents strings which do not contain any substring bb.
+"Hence altogether it represents any string consisting of a substring with no aa followed by one b followed by a substring with no bb.
+
+................................................................................
+Regular Set:
+
+Propertites of Rs:
+
+Union:
+RE1=a(aa)*-->L1={a,aaa,aaaaa...}
+RE2=(aa)*-->L2={E,aa,aaaa...}
+
+L1UL2={E,a,aa,aaa,aaaa...}
+RE=a*
+
+.....................
+Intersection:
+RE1=aa*-->L1={a,aa,aaa...}
+RE2=(aa)*-->L2={E,aa,aaaa...}
+
+aa(aa)*={aa,aaaa,aaaaaa....}
+
+.......................
+
+Compliment:
+
+RE=(aa)*L2={E,aa,aaaa...}
+
+compliment={a,aaa,aaaaa...}
+
+RE=a(aa)*
+
+.................................
+REVERSE
+CLOSURE
+CONCATENATION
+......................
+Reverse
+
+L = {01, 10, 11, 10}
+
+RE (L) = 01 + 10 + 11 + 10
+
+LR = {10, 01, 11, 01}
+
+RE (LR) = 01 + 10 + 11 + 10 which is regular
+
+
+.......................
+
+The concatenation of two regular sets is regular.
+
+Proof −
+
+Let RE1 = (0+1)*0 and RE2 = 01(0+1)*
+
+Here, L1 = {0, 00, 10, 000, 010, ......} (Set of strings ending in 0)
+
+and L2 = {01, 010,011,.....} (Set of strings beginning with 01)
+
+Then, L1 L2 = {001,0010,0011,0001,00010,00011,1001,10010,.............}
+
+...............................
+If L = {a, aaa, aaaaa, .......} (Strings of odd length excluding Null)
+
+i.e., RE (L) = a (aa)*
+
+L* = {a, aa, aaa, aaaa , aaaaa,……………} (Strings of all lengths excluding Null)
+
+RE (L*) = a (a)*
+..........................
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+
+
+
+
+ not ends with "abb"
+
+
+( b + ab )( b + ab )
+bb,bab,abb,abab
+
+abb.E=abb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+21L-1858
+--Question1
+CREATE PROCEDURE GetEmployee
+@employee_id INT
+AS
+BEGIN
+SELECT * FROM employees WHERE employee_id = @employee_id;
+END;
+EXEC GetEmployee @employee_id = 102;
+--Question2
+CREATE PROCEDURE GetBoth
+@employee_id INT,@department_id INT
+AS
+BEGIN
+SELECT * FROM employees WHERE employee_id = @employee_id
+AND department_id=@department_id;
+END;
+EXEC GetBoth @employee_id = 101, @department_id=1;
+--Question3
+EXEC GetEmployee @employee_id = 102;
+EXEC GetEmployee @employee_id = 103;
+EXEC GetEmployee @employee_id = 151;
+--Question4
+Create Procedure UpdateSalary
+@employee_id INT,@salary DECIMAL
+AS
+Begin
+Select employee_id, first_name,last_name,salary
+from employees
+Update employees
+set salary=@salary
+where employee_id=@employee_id
+END;
+EXEC UpdateSalary @employee_id=101,@salary=1690;
+--Question5
+Create PROCEDURE GetEmployeesByDepartment
+@department_id INT
+AS
+BEGIN
+Select first_name,last_name,department_id
+from employees
+where department_id=@department_id
+END;
+EXEC GetEmployeesByDepartment @department_id=1;
+--Question6
+Create PROCEDURE GetEmployeesByDepartment
+@department_id INT
+AS
+BEGIN
+Select first_name,last_name,department_id
+from employees
+where department_id=@department_id
+END;
+EXEC GetEmployeesByDepartment @department_id=1;
+--Question7
+CREATE PROCEDURE CalculateAverageSalary
+AS
+BEGIN
+Select AVG(salary) AS avg_salary
+from employees
+END;
+EXEC CalculateAverageSalary
+--Question8
+CREATE PROCEDURE DeleteEmployee
+@delete_employee INT
+AS
+BEGIN
+delete employees
+where employee_id=@delete_employee
+END;
+EXEC DeleteEmployee @delete_employee=202;
+select* from employees

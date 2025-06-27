@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function convertTOruppees()
+        {
+            selectElement = document.querySelector('#medium');
+            output = selectElement.value;
+            document.querySelector('.output').textContent = output;
+
+            if(output=='pound')
+            {
+                var amount=document.getElementById('amount').value;
+                var converted_amount=parseInt(amount);
+                converted_amount=converted_amount*355;
+                document.getElementById('convertedAmount').textContent = converted_amount;
+            }
+            else if(output=='euro')
+            {
+                var amount=document.getElementById('amount').value;
+                var converted_amount=parseInt(amount);
+                converted_amount=converted_amount*309;
+                document.getElementById('convertedAmount').textContent = converted_amount;
+            }
+            else if(output=='dollar')
+            {
+                var amount=document.getElementById('amount').value;
+                var converted_amount=parseInt(amount);
+                converted_amount=converted_amount*284;
+                document.getElementById('convertedAmount').textContent = converted_amount;
+            }
+        }
+
+        function convertFROMruppees()
+        {
+            selectElement = document.querySelector('#medium');
+            output = selectElement.value;
+            document.querySelector('.output').textContent = output;
+
+            if(output=='pound')
+            {
+                var amount2=document.getElementById('amount2').value;
+                var converted_amount2=parseInt(amount2);
+                converted_amount2=converted_amount2/355;
+                document.getElementById('convertedAmount2').textContent = converted_amount2;
+            }
+            else if(output=='euro')
+            {
+                var amount2=document.getElementById('amount2').value;
+                var converted_amount2=parseInt(amount2);
+                converted_amount2=converted_amount2/309;
+                document.getElementById('convertedAmount2').textContent = converted_amount2;
+            }
+            else if(output=='dollar')
+            {
+                var amount2=document.getElementById('amount2').value;
+                var converted_amount2=parseInt(amount2);
+                converted_amount2=converted_amount2/284;
+                document.getElementById('convertedAmount2').textContent = converted_amount2;
+            }
+        }
+
+        function clearValues() {
+            // Clear all input fields
+            document.getElementById('amount').value = ' ';
+            document.getElementById('amount2').value = ' ';
+            document.getElementById('convertedAmount').textContent = 'Ruppees';
+            document.getElementById('convertedAmount2').textContent = '';
+        }
+
+
+        </script>
+</head>
+<style>
+    
+    body {
+            background-color: rgba(240, 255, 255, 0.642);
+        }
+
+        h1 {
+            color: blue;
+            background-color: azure;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px blue; 
+        }
+
+        h4 {
+            color: rgb(187, 0, 255);
+            border: 2vh;
+            padding: auto;
+            border-radius: 10px;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="text"]:focus {
+            outline: none; 
+            border: 1px solid blue; 
+            box-shadow: 0 0 10px blue; 
+        }
+
+</style>
+
+<body>
+    <h1 style="color: blue; background-color: azure;"><b>Currency Converting Website</b></h1>
+    <h4 style="color: rgb(187, 0, 255); border: 2vh; padding: auto">
+        Select Currency Medium:
+    </h4>
+    
+    <p> Select one from the given options:
+        <select id="medium">
+            <option value="pound">Select</option>
+            <option value="pound">Pound</option>
+            <option value="euro">Euro</option>
+            <option value="dollar">Dollar</option>
+        </select>
+    </p>
+    
+        <h4 style="color: rgb(187, 0, 255); border: 2vh; padding: auto">
+            <p> The value of the option selected is:
+                <span class="output"></span>
+            </p>
+            Please enter amount in your selected medium to convert to Ruppees: 
+            <form>
+                <input type="text" id="amount" name="amount" placeholder="Enter Amount..">
+            </form>
+        </h4>
+        <button class="btn" type="button" onclick="convertTOruppees()"> Convert TO Ruppees </button>
+
+        <h4 style="color: rgb(255, 0, 102); border: 2vh; padding: auto">
+            <span id="convertedAmount"> Ruppees</span> 
+        </h4>
+
+
+
+        <h4 style="color: rgb(187, 0, 255); border: 2vh; padding: auto">
+            Please enter amount in Ruppees to convert to your selected medium: 
+            <form>
+                <input type="text" id="amount2" name="amount2" placeholder="Enter Amount..">
+            </form>
+        </h4>
+        <button class="btn" type="button" onclick="convertFROMruppees()"> Convert FROM Ruppees </button>
+        
+        <h4 style="color: rgb(255, 0, 102); border: 2vh; padding: auto">
+            <span id="convertedAmount2"></span> <span class="output"></span>
+        </h4>
+
+
+
+        <h4 style="color: rgb(187, 0, 255); border: 2vh; padding: auto">
+           Programmed BY:  <input type="text"  placeholder="Umamah">
+        </h4>
+
+        <input type='reset' value='Reset' />
+
+</body>
+
+</html>

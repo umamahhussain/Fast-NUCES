@@ -1,0 +1,89 @@
+                                  Regular Expression
+
+
+.................
+Arithmetic expression
+
+a=a+b
+b=c-d
+
+operands(a,b)
+operator(+,-)
+........................
+Regular expression
+alphabets ...a,b,1,0,E,
+
+
+Kleen star(a*)-->E,a,aa,aaa......
+positive closue/kleen plus(a+)-->a,aa,aaa....
+concatenation(a.b)-->ab-->abc.cde-->abccde
+union(a+b)---> a U b
+parenthesis ()
+L={a,b,c}-->R.E=(a+b+c)
+
+......................
+L={Epsilon}--> R.E= (Epsilon)
+L={a}---> R.E= (a)
+L={b}---> R.E= (b)
+L={a,b}---> R.E= (a+b)
+L={E,a,b}---> R.E= (E+a+b)
+L={aa,ab,ba,bb}---> R.E= (a+b).(a+b)-->aa,ab,ba,bb
+L={aaa,abb,bab,bbb....3 length}---> R.E= (a+b).(a+b).(a+b)-->aaa,abb,bab,bbb....
+
+L={a,b,aa,ab,ba,bb}---> R.E= ((a+b+((a+b).(a+b))-->(E+a+b).(a+b)-->a,b,aa,ab,ba,bb
+
+L={E,a,b,aa,ab,ba,bb}---> R.E=(E+a+b).(E+a+b)-->E,a,b,aa,ab,bb,ba
+
+.................
+R.E-->NFA-E-->NFA-->DFA-->MDFA----->VALIDATE LANGUAGE-->STRING
+
+......................
+
+R.E=(a+b)*
+
+(a+b)0,(a+b)1,(a+b)2,(a+b)3............infinity
+
+E,a,b-->(a+b)(a+b)-->(a+b)(a+b)(a+b)........
+
+L={E,a,b,aa,ab,ba,bb,aaa,bbb,aab,baa...........}
+
+............................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
